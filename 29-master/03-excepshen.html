@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="paragraf">please input a number between 5 to10</p>
+
+    <input type="text" id="demo">
+    <button type="button" onclick="validation();">
+        ok
+    </button>
+    <p id="ex"></p>
+    <script>
+        function validation() {
+            var message, objpex,number;
+            message = document.getElementById("ex");
+            message.innerHTML = "";
+            objpex = document.getElementById("demo").value;
+            try {
+                if (objpex == "") throw "empty";
+                if(isNaN(objpex)) throw "not a number";
+                number=Number(objpex);
+                if(number<5) throw "too low";
+                if(number>10)throw "too high";
+                message.innerHTML=" it is ok";
+            } catch (error) {
+            message.innerHTML="input is:"+error;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

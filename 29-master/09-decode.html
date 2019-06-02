@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" style="width:100%">
+    <button onclick="myfunction()">ok</button>
+    <p id="demo"></p>
+    <p id="eception"></p>
+    <a href="https://www.sis-eg.com/fa/sis_static_pages/42653-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%BE%D9%88%D8%B1%D8%AA%D8%A7%D9%84-%D8%B3%D8%A7%D9%85%D8%A7%D9%86.html"></a>
+    <script>
+      function myfunction(){
+        try {
+            let uri=document.getElementById("input").value;
+            // let s="https://www.sis-eg.com/fa/sis_static_pages/42653-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%BE%D9%88%D8%B1%D8%AA%D8%A7%D9%84-%D8%B3%D8%A7%D9%85%D8%A7%D9%86.html"
+        document.getElementById("demo").innerText=decodeURI(uri);
+        } catch (error) {
+            document.getElementById("eception").innerText=error.name;
+        }
+
+      }
+      
+ 
+    </script>
+</body>
+</html>

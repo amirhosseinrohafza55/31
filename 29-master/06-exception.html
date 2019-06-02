@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>well kommen</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="text" id="input">
+    <button onclick="myfanction();">ok</button>
+    <script>
+        function myfanction(){
+            let x=document.getElementById("input").value;
+    try {
+        eval(x);
+    } catch (error) {
+        document.getElementById("demo").innerHTML=error;
+    }
+        }
+       
+    </script>
+</body>
+</html>
